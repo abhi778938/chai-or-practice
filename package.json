@@ -1,0 +1,16 @@
+{
+  "name": "chai-with-backend",
+  "version": "1.0.0",
+  "description": "chai with beckend project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "and",
+    "chai"
+  ],
+  "author": "abhishek singh",
+  "license": "ISC"
+}
