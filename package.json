@@ -5,10 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-  "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
-  "start": "node -r dotenv/config --experimental-json-modules src/index.js"
-},
-
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+    "start": "node -r dotenv/config --experimental-json-modules src/index.js"
+  },
   "keywords": [
     "javascript",
     "and",
@@ -21,10 +20,12 @@
     "prettier": "3.6.2"
   },
   "dependencies": {
+    "cloudinary": "^2.8.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "mongoose": "^8.19.1"
+    "mongoose": "^8.19.1",
+    "multer": "^2.0.2"
   }
 }
