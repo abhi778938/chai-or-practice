@@ -10,6 +10,7 @@ this.Errors=this.Errors
 
 if (stack) {
     this.stack=stack
+    
 }
 else{
     Error.captureStackTrace(this,this.constructor)
