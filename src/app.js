@@ -1,21 +1,24 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { urlencoded } from "express";
+
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.cors,
-  })
-);
+app.use(cors({
+  origin: process.env.cors|| "http://localhost:5173", // default if missing
+  credentials: true
+}));
+
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-import router from "./routes/product.router.js";
+app.get("/", (req, res) => {
+  res.send("Server is working fine ✅");
+});
 
-app.use("/api/v1/user",router)
+import router from "./routes/product.router.js";
+app.use("api/v1/user", router);
 
 export { app };
