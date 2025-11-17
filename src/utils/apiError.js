@@ -5,7 +5,7 @@ this.statusCode=statusCode,
 this.message=message,
 
 this.data=null,
-this.soccess=false,
+this.success=false,
 this.Errors=this.Errors
 
 if (stack) {

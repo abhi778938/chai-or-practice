@@ -14,11 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.send("Server is working fine ✅");
-});
+// app.get("/", (req, res) => {
+//   res.send("Server is working fine ✅");
+// });
 
 import router from "./routes/product.router.js";
-app.use("api/v1/user", router);
+app.use("/api/v1/users", router);
 
 export { app };

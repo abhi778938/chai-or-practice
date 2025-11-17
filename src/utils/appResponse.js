@@ -1,8 +1,8 @@
 class appResp{
-    constructor(statusCode,data,message="soccess"){
-        super()
+    constructor(statusCode,data,message="success"){
+        
         this.statusCode=statusCode
-        this.data=data,
+        this.data=data
         this.message=message
         this.success=statusCode
     }

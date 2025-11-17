@@ -40,6 +40,9 @@ const userSechma = new Schema(
       type: String,
       required: [true, "password is required"],
     },
+    refreshToken:{
+      type:String
+    }
   },
   { timestamps: true }
 );
@@ -47,7 +50,7 @@ const userSechma = new Schema(
 
 userSechma.pre("save",async function(next) {
     if(!this.isModified("password")) return next();
-    this.password=bcrypt.hash(this.password,10)
+    this.password= await bcrypt.hash(this.password,10)
     next()
 })
 
@@ -67,7 +70,7 @@ fullName:this.fullName
 )
 }
 
-userSechma.methods.refreshToken=async function (){
+userSechma.methods.refreshtoken=async function (){
  return  jwt.sign({
        _id:this._id
     },
